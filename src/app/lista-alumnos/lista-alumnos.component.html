@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="form-inline">
+          <fieldset class="form-group col-sm-11"></fieldset>
+          <fieldset class="form-group col-sm-11">
+            <a class="btn btn-light btn-lg mt-3" [routerLink]="['/usuarios/agregar']"><i class="bi bi-plus-circle"></i> Agregar Usuario</a>
+          </fieldset>
+        </form>
+        <br>
+        <table class="table table-warning table-striped table-bordered text-center">
+          <thead>
+            <tr>
+              <th scope="col"> ID </th>
+              <th scope="col"> NOMBRE </th>
+              <th scope="col"> EMAIL </th>
+              <th scope="col"> CARRERA </th>
+              <th scope="col"> SEMESTRE </th>
+              <th scope="col-4"> ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let usuario of usuarios | async" >
+              <td scope="row"><i>{{ usuario.id_usuario }}</i></td>
+              <td><i>{{ usuario.nombre }}</i></td>
+              <td><i>{{ usuario.email }}</i></td>
+              <td><i>{{ usuario.carrera}}</i></td>
+              <td><i>{{ usuario.semestre}}</i></td>
+              <td>
+                <div >
+                  <fieldset>
+                    <a class="btn btn-primary" [routerLink]="['/usuarios/editar/', usuario.id_usuario]"><i class="bi bi-pencil-square"></i> Editar</a>
+                  </fieldset>
+                  <fieldset >
+                    <a class="btn btn-danger" (click)="borrarUsuario(usuario.id_usuario)"><i class="bi bi-trash3"></i> Borrar</a>
+                  </fieldset>
+                </div>
+               
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

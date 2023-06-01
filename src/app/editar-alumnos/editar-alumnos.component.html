@@ -1,0 +1,35 @@
+<div class="container mt-5" style="width: 35rem;">
+  <div class="card card-body p-4 rounded-1">
+    <form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+      <fieldset >
+        <div>
+          <label class="control-label" for="nombre">Nombre</label>
+          <input type="text" class="form-control" required [(ngModel)]="usuario.nombre" name="nombre">
+        </div>
+      </fieldset>
+      <fieldset >
+        <div>
+          <label class="control-label" for="email">Email</label>
+          <input type="email" class="form-control" required [(ngModel)]="usuario.email" name="email">
+        </div>
+      </fieldset>
+      <fieldset >
+        <div>
+          <label class="control-label" for="carrera">Carrera</label>
+          <input type="carrera" class="form-control" required [(ngModel)]="usuario.carrera" name="carrera">
+        </div>
+      </fieldset>
+      <fieldset >
+        <div>
+          <label class="control-label" for="semestre">Semestre</label>
+          <input type="semestre" class="form-control" required [(ngModel)]="usuario.semestre" name="semestre">
+        </div>
+      </fieldset>
+      <fieldset >
+        <div class="d-grid gap-2 col-6 mx-auto mt-3 text-center">
+          <button type="submit" class="btn btn-light" [disabled]="!usuarioForm.form.valid"><i class="bi bi-check2-square"></i> Guardar</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

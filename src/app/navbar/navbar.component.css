@@ -1,0 +1,14 @@
+nav{
+    background: #4E7A6B;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4E7A6B, #4E7A6B);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4E7A6B,#4E7A6B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: white;
+}
+i{
+    width: 3em;
+}
